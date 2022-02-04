@@ -105,7 +105,7 @@ namespace MeshPencil.Common.MouseInputListener
             }
             else
             {
-                if (Input.GetKeyDown(_finishDrawingKeyCode))
+                if (Input.GetKeyDown(_finishDrawingKeyCode) || Input.GetMouseButtonUp(0))
                 {
                     OnDrawFinished();
                 }

@@ -14,14 +14,14 @@ public class KarakterPaketiMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (GameController.instance.isContinue == true)
-        {
-            transform.Translate(Vector3.forward * Time.deltaTime * _speed);
-        }
-        else
-        {
+        //if (GameController.instance.isContinue == true)
+        //{
+        //    transform.Translate(Vector3.forward * Time.deltaTime * _speed);
+        //}
+        //else
+        //{
 
-        }
+        //}
         
     }
 

@@ -655,7 +655,9 @@ namespace MeshPencil.Common.Controllers
             }
 
             OnFinish?.Invoke();
-            
+            resultParentObject.transform.position = new Vector3(-4f,3.32f,13);
+            resultParentObject.transform.localScale = Vector3.one * 2.85f;
+            resultParentObject.transform.rotation = Quaternion.Euler(90,0,0);
             OnFinalObjectSpawned?.Invoke(resultParentObject.gameObject);
         }
 
