@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public static GameController instance; // singleton yapisi icin gerekli ornek ayrintilar icin BeniOku 22. satirdan itibaren bak.
-
+    public int cizimSiniri => (int)UIController.instance.meshSlider.maxValue;
+    public int cizilenPixel = 0;
 
     [HideInInspector]public int score, elmas; // ayrintilar icin benioku 9. satirdan itibaren bak
 
@@ -20,7 +21,7 @@ public class GameController : MonoBehaviour
 
 	void Start()
     {
-        isContinue = false;
+        isContinue = true;
     }
 
 

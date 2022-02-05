@@ -10,14 +10,15 @@ using UnityEngine;
 using MeshPencil.Renderers.VoxelRenderer;
 using UnityEngine.Events;
 
+
 namespace MeshPencil.Common.Controllers
 {
     public class MeshPencilController : MonoBehaviour
     {
+
         public UnityEvent OnFinish;
         public UnityEvent BeforeMeshSpawned;
         public event Action<GameObject> OnFinalObjectSpawned;
-
         public Camera RenderCamera {
             get { return _renderCamera != null ? _renderCamera : Camera.main; }
         }
@@ -89,6 +90,8 @@ namespace MeshPencil.Common.Controllers
         [SerializeField] string _subfolderToSave = "MeshDatas";
         [Tooltip("Save data file name without extension")]
         [SerializeField] string _savedFileName = "MyMeshName";
+
+
 
         #endregion
 
@@ -368,7 +371,6 @@ namespace MeshPencil.Common.Controllers
         {
             ListenPaintPixels();
             ListenErasePixels();
-
             HighlightPixels();
         }
 
@@ -535,7 +537,12 @@ namespace MeshPencil.Common.Controllers
 
             Vector3 positionToDraw = _inputListener.GetMousePosition();
             float drawPointRadius = _mouseCursorDisplayer.DrawCircleRadius;
+//*****************************************  ADDED BY SBI... ***********************************
 
+           // MeshGeneratorBySbi.instance.AddVertice(positionToDraw);
+
+
+//***************************************** CONTINUE  ******************************************
             _pixelDrawer.PaintNearPoints(positionToDraw, drawPointRadius);
         }
 

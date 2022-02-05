@@ -48,9 +48,10 @@ namespace MeshPencil.Renderers.VoxelRenderer
 
         private void GenerateVoxelMesh(VoxelData data)
         {
+            
             _vertices = new List<Vector3>();
             _triangles = new List<int>();
-
+            
             for (int y = 0; y < data.Depth; y++)
             {
                 for (int x = 0; x < data.Width; x++)
@@ -63,6 +64,8 @@ namespace MeshPencil.Renderers.VoxelRenderer
                     var cubePosition = new Vector3((float)x * _scale, 0, (float)y * _scale);
 
                     MakeCube(_voxelScale, cubePosition, x, y, data);
+                    
+                    
                 }
             }
         }
@@ -71,15 +74,18 @@ namespace MeshPencil.Renderers.VoxelRenderer
         {
             for (int i = 0; i < 6; i++)
             {
-                if (data.GetNeighbor(x, y, (Direction)i) == 0)
-                {
-                    MakeFace((Direction)i, cubeScale, cubePosition);
-                }
-            }
+				if (data.GetNeighbor(x, y, (Direction)i) == 0)
+				{
+
+					MakeFace((Direction)i, cubeScale, cubePosition);
+
+				}
+			}
         }
 
         private void MakeFace(Direction direction, Vector3 faceScale, Vector3 facePosition)
         {
+          
             _vertices.AddRange(CubeMeshData.FaceVertices(direction, faceScale, facePosition));
 
             int verticesCount = _vertices.Count;

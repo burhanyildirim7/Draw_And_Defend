@@ -12,8 +12,9 @@ namespace MeshPencil.Collider
 
         public override void CreateCollider(VoxelData data, float depth, float boxSize,PhysicMaterial physicMaterial = null, Action<GameObject> onCompleteCallback = null)
         {
+            transform.tag = "parentCube";
             _onCompleteCallback = onCompleteCallback;
-
+            transform.GetComponent<Rigidbody>().velocity = new Vector3(0,-10f,0);
             for (int y = 0; y < data.Width; y++)
             {   
                 //Continue extend current box collider width
@@ -51,7 +52,7 @@ namespace MeshPencil.Collider
                         isBlockContinue = true;
 
                         GameObject boxColliderCube = Instantiate(_singleColliderCubePrefab);
-
+                        boxColliderCube.transform.tag = "mesh";
                         boxColliderCube.transform.parent = gameObject.transform;
                         boxColliderCube.transform.position = new Vector3(x * boxSize, y * boxSize, 0);
 

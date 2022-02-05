@@ -108,6 +108,8 @@ namespace MeshPencil.Common.MouseInputListener
                 if (Input.GetKeyDown(_finishDrawingKeyCode) || Input.GetMouseButtonUp(0))
                 {
                     OnDrawFinished();
+                    GameController.instance.cizilenPixel = 0;
+                    UIController.instance.SetMeshSlider(GameController.instance.cizimSiniri);
                 }
             }
         }   

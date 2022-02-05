@@ -6,6 +6,7 @@ namespace MeshPencil.Drawers.PixelDrawer
     [RequireComponent(typeof(SpriteRenderer))]
     public class SpritePixel : MonoBehaviour
     {
+      
         [SerializeField] private SpritePixelData _pixelData;
 
         private SpriteRenderer _spriteRenderer;

@@ -6,9 +6,9 @@ namespace MeshPencil.Drawers.PixelDrawer
 {
     public class SpritePixelDrawer : PixelDrawer
     {
+        
         public override event Action<byte[,]> DrawFinished;
         public override event Action<string> DrawFinishFailed;
-
         [Tooltip("Single pixel prefab")]
         [SerializeField]
         private GameObject _pointPrefab;
@@ -34,10 +34,13 @@ namespace MeshPencil.Drawers.PixelDrawer
             
             _isDetectingNow = true;
             SpawnPixelObjects();
+
+            
         }
 
         public override void SpawnPixelObjects()
         {
+           
             _pixels = new List<SpritePixel>();
 
             Vector3 offsetedPosition = transform.position + new Vector3(_pixelSize/2, _pixelSize/2, 0);
@@ -123,14 +126,20 @@ namespace MeshPencil.Drawers.PixelDrawer
             if (!_isDetectingNow)
                 return;
 
+            
             float radiusOfPoint = _pixelSize / 2;
 
             for (int i = 0; i < _pixels.Count; i++)
             {
                 bool isNear = Vector3.Distance(_pixels[i].PointPosition, point) <= (distance + radiusOfPoint);
 
-                if (isNear)
+                if (isNear && !_pixels[i].IsPainted && GameController.instance.cizilenPixel < GameController.instance.cizimSiniri)
+				{
+                    GameController.instance.cizilenPixel++;
+                    UIController.instance.SetMeshSlider(GameController.instance.cizimSiniri - GameController.instance.cizilenPixel); ;
                     _pixels[i].SetPainted(true);
+                }
+                   
             }
         }   
         

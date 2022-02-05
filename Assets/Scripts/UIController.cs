@@ -10,6 +10,7 @@ public class UIController : MonoBehaviour
 	public GameObject TapToStartPanel, LoosePanel, GamePanel, WinPanel,winScreenEffectObject, winScreenCoinImage,startScreenCoinImage,scoreEffect;
 	public Text gamePlayScoreText, winScreenScoreText, levelNoText, tapToStartScoreText, totalElmasText;
 	public Animator ScoreTextAnim;
+	public Slider meshSlider;
 
 
 
@@ -227,6 +228,11 @@ public class UIController : MonoBehaviour
 		tapToStartScoreText.text = PlayerPrefs.GetInt("total").ToString();
 	}
 
+
+	public void SetMeshSlider(int value)
+	{
+		meshSlider.value = value;
+	}
 	
 
 }
