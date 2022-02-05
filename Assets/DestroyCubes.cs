@@ -1,27 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class DestroyCubes : MonoBehaviour
 {
+	public bool isEnable = true;
+	private void Start()
+	{
+		DOTween.Init();
+	}
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag("parentCube"))
+		if (other.CompareTag("mesh") && isEnable)
 		{
-			StartCoroutine(MeshCrashEvents(other.gameObject));
+			isEnable = false;
+			other.transform.parent.GetComponent<Rigidbody>().useGravity = false;
+			other.transform.parent.GetComponent<Rigidbody>().velocity = Vector3.zero;
+			MeshCrashGround(other.transform.parent.gameObject);
 			Debug.Log("destroy çalýþtý...");
 		}
+		// GEREKÝRSE AÇILACAK.... DÜÞÜNÜLECEK..
+		//if (other.CompareTag("mesh"))
+		//{
+		//	other.GetComponent<Collider>().enabled = false;
+		//}
 
-		IEnumerator MeshCrashEvents(GameObject obj)
+	    void MeshCrashGround(GameObject obj)
 		{
-			Debug.Log("ÇALIÞTI ASLINLDAAA");
-			//obj.transform.parent.GetComponent<Rigidbody>().velocity = new Vector3(0,24,0);
-			obj.transform.parent.GetComponent<Rigidbody>().AddForce(new Vector3(0, 200, 0));
-			yield return new WaitForSeconds(1f);
-			obj.transform.parent.GetComponent<Rigidbody>().velocity = Vector3.zero;
-			obj.transform.parent.GetComponent<Rigidbody>().useGravity = false;
-			yield return new WaitForSeconds(2f);
+			obj.transform.DOMove(new Vector3(obj.transform.position.x, -3.70f,obj.transform.position.z), .3f)
+			.OnComplete(() =>
+			{
+				obj.transform.DOMove(new Vector3(obj.transform.position.x, -4.48f, obj.transform.position.z), .6f).SetEase(Ease.OutBounce)
+				.OnComplete(()=> 
+				{
+					StartCoroutine(DestroyMesh(obj.gameObject));
+				});
+			});
+		}
+
+		IEnumerator DestroyMesh(GameObject obj)
+		{
+			yield return new WaitForSeconds(.5f);
 			Destroy(obj);
+			isEnable = true;
 		}
 	}
 }
