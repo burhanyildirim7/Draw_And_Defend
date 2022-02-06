@@ -17,6 +17,10 @@ TagManager:
   - mesh
   - fallArea
   - parentCube
+  - hareket1
+  - hareket2
+  - hareket3
+  - kale
   layers:
   - Default
   - TransparentFX

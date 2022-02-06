@@ -10,7 +10,7 @@ public class UIController : MonoBehaviour
 	public GameObject TapToStartPanel, LoosePanel, GamePanel, WinPanel,winScreenEffectObject, winScreenCoinImage,startScreenCoinImage,scoreEffect;
 	public Text gamePlayScoreText, winScreenScoreText, levelNoText, tapToStartScoreText, totalElmasText;
 	public Animator ScoreTextAnim;
-	public Slider meshSlider;
+	public Slider meshSlider,castleSlider;
 
 
 
@@ -233,6 +233,12 @@ public class UIController : MonoBehaviour
 	{
 		meshSlider.value = value;
 	}
+
+	public void SetCastleSlider(int value)
+	{
+		castleSlider.value = value;
+	}
+
 	
 
 }

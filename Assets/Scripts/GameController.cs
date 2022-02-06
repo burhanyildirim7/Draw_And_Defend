@@ -12,6 +12,10 @@ public class GameController : MonoBehaviour
 
     [HideInInspector] public bool isContinue;  // ayrintilar icin beni oku 19. satirdan itibaren bak
 
+    [HideInInspector] public List<GameObject> DeactivatedObjects = new List<GameObject>();
+
+    [HideInInspector] public int CastleHealth = 100;
+
 
 	private void Awake()
 	{
@@ -63,4 +67,10 @@ public class GameController : MonoBehaviour
         PlayerPrefs.SetInt("totalScore", PlayerPrefs.GetInt("totalScore") + score);
     }
 
+    public void DecreaseCastleHealth()
+	{
+        CastleHealth -= 10;
+        UIController.instance.SetCastleSlider(CastleHealth);
+	}
+  
 }

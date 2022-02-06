@@ -10,6 +10,15 @@ public class Enemy : MonoBehaviour
 		{
 			Debug.Log("meshe captýkk");
 			Destroy(gameObject);
+		}else if (other.CompareTag("kale"))
+		{
+			// restart game için tutulamlý..
+			GetComponent<Collider>().enabled = false;
+			GameController.instance.DeactivatedObjects.Add(other.gameObject);
+			transform.parent = null;
+			// saldýrý yapýyor...
+			GameController.instance.DecreaseCastleHealth();
+			
 		}
 	}
 

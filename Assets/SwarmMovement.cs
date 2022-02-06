@@ -5,10 +5,54 @@ using UnityEngine;
 public class SwarmMovement : MonoBehaviour
 {
 	private float swarmSpeed = .04f;
-	private void Update()
+	public Transform hareketNoktasi1, hareketNoktasi2 , hareketNoktasi3;
+	private bool isRotationTo1 = true;
+	private bool isRotationTo2, isRotationTo3;
+
+	private void Start()
 	{
-		if(GameController.instance.isContinue)
-		transform.position = new Vector3(transform.position.x,transform.position.y,transform.position.z-swarmSpeed);
+		RotationToHareketNoktasi1();
 	}
 
+	private void Update()
+	{
+		if (GameController.instance.isContinue && isRotationTo1)
+			transform.position = Vector3.MoveTowards(
+				transform.position, new Vector3(hareketNoktasi1.position.x, transform.position.y, hareketNoktasi1.position.z), swarmSpeed);
+
+		else if (GameController.instance.isContinue && isRotationTo2)
+			transform.position = Vector3.MoveTowards(
+				transform.position, new Vector3(hareketNoktasi2.position.x, transform.position.y, hareketNoktasi2.position.z), swarmSpeed);
+
+		else if(GameController.instance.isContinue && isRotationTo3)
+			transform.position = Vector3.MoveTowards(
+				transform.position, new Vector3(hareketNoktasi3.position.x, transform.position.y, hareketNoktasi3.position.z), swarmSpeed);
+	}
+
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.CompareTag("hareket1"))
+		{
+			isRotationTo1 = false;
+			isRotationTo2 = true;
+			StartCoroutine(RotationToHareketNoktasi2());
+		}else if (other.CompareTag("hareket2"))
+		{
+			isRotationTo2 = false;
+			isRotationTo3 = true;
+		}
+	
+	}
+
+
+	void RotationToHareketNoktasi1()
+	{
+		transform.LookAt(hareketNoktasi1);
+	}
+
+	IEnumerator RotationToHareketNoktasi2()
+	{
+		transform.LookAt(hareketNoktasi2);
+		yield return new WaitForSeconds(1);
+	}
 }
