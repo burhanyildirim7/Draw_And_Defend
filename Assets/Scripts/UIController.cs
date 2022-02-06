@@ -23,7 +23,7 @@ public class UIController : MonoBehaviour
 
 	private void Start()
 	{
-		//StartUI();
+		StartUI();
 	}
 
 	// Oyun ilk acildiginda calisacak olan ui fonksiyonu. 
@@ -45,13 +45,11 @@ public class UIController : MonoBehaviour
 	public void TapToStartButtonClick()
 	{
 
-		GameController.instance.isContinue = true;
-		//PlayerController.instance.SetArmForGaming();
+		GameController.instance.StartingEventsAfterTapToStart();
 		TapToStartPanel.SetActive(false);
 		GamePanel.SetActive(true);
 		SetLevelText(LevelController.instance.totalLevelNo);
 		SetGamePlayScoreText();
-
 	}
 
 	// RESTART TUSUNA BASILDISINDA  --- LOOSE EKRANINDA
@@ -202,6 +200,12 @@ public class UIController : MonoBehaviour
 	public void ActivateLooseScreen()
 	{
 		GamePanel.SetActive(false);
+		StartCoroutine(DelayAndActivateLooseScreen());
+	}
+
+	IEnumerator DelayAndActivateLooseScreen()
+	{
+		yield return new WaitForSeconds(4);
 		LoosePanel.SetActive(true);
 	}
 

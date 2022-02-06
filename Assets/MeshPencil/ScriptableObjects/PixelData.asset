@@ -17,10 +17,10 @@ MonoBehaviour:
     rgba: 2801795071
   _detectedColor:
     serializedVersion: 2
-    rgba: 1690682821
+    rgba: 2525135490
   _paintedColor:
     serializedVersion: 2
-    rgba: 3087073163
+    rgba: 3070295824
   _erasedColor:
     serializedVersion: 2
     rgba: 4278215167

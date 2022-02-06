@@ -13,12 +13,27 @@ public class Enemy : MonoBehaviour
 		}else if (other.CompareTag("kale"))
 		{
 			// restart game için tutulamlý..
-			GetComponent<Collider>().enabled = false;
-			GameController.instance.DeactivatedObjects.Add(other.gameObject);
 			transform.parent = null;
-			// saldýrý yapýyor...
-			GameController.instance.DecreaseCastleHealth();
+			StartCoroutine(RandomPosition());
+			GetComponent<Collider>().enabled = false;
+			GameController.instance.EnemiesOnCastle.Add(gameObject);
 			
+			// saldýrý yapýyor...
+			GameController.instance.DecreaseCastleHealth(); 
+			
+		}
+	}
+
+	IEnumerator RandomPosition()
+	{
+		int sayac = 0;
+		float xValue = Random.Range(-.02f, .02f);
+		float zValue = Random.Range(-.01f, .01f);
+		while(sayac < 100)
+		{
+			transform.position +=new Vector3(xValue,0,zValue);
+			sayac++;
+			yield return new WaitForSeconds(.02f);
 		}
 	}
 

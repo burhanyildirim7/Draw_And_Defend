@@ -44,7 +44,7 @@ public class SwarmMovement : MonoBehaviour
 		{
 			if(transform.childCount == 0)
 			{
-				GameController.instance.ActivateMeshCam();
+				//GameController.instance.ActivateMeshCam();
 				Destroy(gameObject);
 			}
 		}
