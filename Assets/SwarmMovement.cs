@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwarmMovement : MonoBehaviour
 {
-	private float swarmSpeed = .04f;
+	private float swarmSpeed = .02f;
 	public Transform hareketNoktasi1, hareketNoktasi2 , hareketNoktasi3;
 	private bool isRotationTo1 = true;
 	private bool isRotationTo2, isRotationTo3;
@@ -40,7 +40,15 @@ public class SwarmMovement : MonoBehaviour
 		{
 			isRotationTo2 = false;
 			isRotationTo3 = true;
+		}else if (other.CompareTag("kale"))
+		{
+			if(transform.childCount == 0)
+			{
+				GameController.instance.ActivateMeshCam();
+				Destroy(gameObject);
+			}
 		}
+
 	
 	}
 

@@ -41,7 +41,8 @@ public class DestroyCubes : MonoBehaviour
 
 		IEnumerator DestroyMesh(GameObject obj)
 		{
-			yield return new WaitForSeconds(.5f);
+			GameController.instance.ActivateMeshCam();
+			yield return new WaitForSeconds(.2f);
 			Destroy(obj);
 			isEnable = true;
 		}

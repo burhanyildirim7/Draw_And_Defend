@@ -108,6 +108,7 @@ namespace MeshPencil.Common.MouseInputListener
                 if (Input.GetKeyDown(_finishDrawingKeyCode) || Input.GetMouseButtonUp(0))
                 {
                     OnDrawFinished();
+                    GameController.instance.DeactivateMeshCam();
                     GameController.instance.cizilenPixel = 0;
                     UIController.instance.SetMeshSlider(GameController.instance.cizimSiniri);
                 }
@@ -154,7 +155,7 @@ namespace MeshPencil.Common.MouseInputListener
         //Start and finish painting detection
         private void CheckDrawingInput()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && GameController.instance.isDrawable)
             {
                 if (!_isErasingMode)
                 {

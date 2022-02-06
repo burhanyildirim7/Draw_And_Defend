@@ -16,6 +16,10 @@ public class GameController : MonoBehaviour
 
     [HideInInspector] public int CastleHealth = 100;
 
+    public GameObject meshCam;
+
+    public bool isDrawable = true;
+
 
 	private void Awake()
 	{
@@ -72,5 +76,23 @@ public class GameController : MonoBehaviour
         CastleHealth -= 10;
         UIController.instance.SetCastleSlider(CastleHealth);
 	}
+
+    public IEnumerator DelayAndActivateMeshCam()
+	{
+        yield return new WaitForSeconds(.6f);
+        ActivateMeshCam();
+	}
   
+    public void ActivateMeshCam()
+	{
+        cizilenPixel = 0;
+        meshCam.SetActive(true);
+        isDrawable = true;
+	}
+
+    public void DeactivateMeshCam()
+	{
+        isDrawable = false;
+        meshCam.SetActive(false);
+	}
 }

@@ -11,6 +11,10 @@ public class KendimeNotlarSaid : MonoBehaviour
      *  
      - MeshPencilController.cs scritptinde 658. satýr civarý VoxelRenderer_OnMeshCreated fonksiyonu içinde pozisyon ve rotasyon vermeye çalýþýyorum.
 
+     - meshi býrakma olayý InputListener içinde 108. satýrdan itibaren..
+
+     - inputlisterner 158. satýra isdrawable deðiþkeni ekledim..
+
      
      */
 }
