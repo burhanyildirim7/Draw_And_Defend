@@ -75,8 +75,9 @@ public class GameController : MonoBehaviour
     /// <param name="katsayi"></param>
     public void ScoreCarp(int katsayi)
 	{
-        if (PlayerController.instance.xVarMi) score *= katsayi;
-        else score = 1 * score;
+        //if (PlayerController.instance.xVarMi) score *= katsayi;
+        //else score = 1 * score;
+        score *= katsayi;
         PlayerPrefs.SetInt("totalScore", PlayerPrefs.GetInt("totalScore") + score);
     }
 
@@ -108,9 +109,12 @@ public class GameController : MonoBehaviour
     // win sonu...
     public void FinishLevelEvents()
 	{
+        meshCam.SetActive(false);
         DeactivateMeshCam();
         ScoreCarp(1);
-        Debug.Log("KAZANDIIKKK");
+        isContinue = false;
+        UIController.instance.ActivateWinScreen();
+
         // sevineceklerrr... falan filann sonra win ekraný...
 	}
 
@@ -144,6 +148,7 @@ public class GameController : MonoBehaviour
         cizilenPixel = 0;
         meshCam.SetActive(true);
         inputListener.SetActive(true);
+        isLastSwarm = false;
     }
 
     public void StartingEventsAfterNextLevel()

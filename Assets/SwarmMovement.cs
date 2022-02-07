@@ -42,7 +42,7 @@ public class SwarmMovement : MonoBehaviour
 			isRotationTo3 = true;
 		}else if (other.CompareTag("hareket3"))
 		{
-			if(other.gameObject.name == "sonSwarm")
+			if(gameObject.name == "sonSwarm")
 			{
 				if(GameController.instance.castleHealth >= 0)
 				{

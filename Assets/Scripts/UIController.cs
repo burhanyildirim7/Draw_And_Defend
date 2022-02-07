@@ -170,7 +170,6 @@ public class UIController : MonoBehaviour
 			yield return new WaitForSeconds(.025f);
 			if(adet %3 == 0)
 			{
-				Debug.Log("çalýþtýýýý");
 				GameObject coin = Instantiate(winScreenEffectObject, startScreenCoinImage.transform.position, Quaternion.identity,TapToStartPanel.transform);
 				coin.GetComponent<Image>().sprite = winScreenCoinImage.GetComponent<Image>().sprite;
 				coin.transform.rotation = startScreenCoinImage.transform.rotation;
