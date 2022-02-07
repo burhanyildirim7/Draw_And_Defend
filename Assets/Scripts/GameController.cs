@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
     public int cizimSiniri => (int)UIController.instance.meshSlider.maxValue;
     public int cizilenPixel = 0;
 
+    public float swarmSpeed = .02f;
+
     [HideInInspector]public int score, elmas; // ayrintilar icin benioku 9. satirdan itibaren bak
 
     [HideInInspector] public bool isContinue,isLastSwarm;  // ayrintilar icin beni oku 19. satirdan itibaren bak
@@ -125,7 +127,7 @@ public class GameController : MonoBehaviour
         isDrawable = false;
         meshCam.SetActive(false);
         castle.transform.DOMoveY(-12f,3);
-        king.transform.DOMoveY(-4.2f,1).
+        king.transform.DOMoveY(1.1f,1).
             OnComplete(()=> {
                 flag.SetActive(true);
                 int enemyCount = EnemiesOnCastle.Count;

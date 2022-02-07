@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwarmMovement : MonoBehaviour
 {
-	private float swarmSpeed = .02f;
+	private float swarmSpeed => GameController.instance.swarmSpeed;
 	public Transform hareketNoktasi1, hareketNoktasi2 , hareketNoktasi3;
 	private bool isRotationTo1 = true;
 	private bool isRotationTo2, isRotationTo3;
