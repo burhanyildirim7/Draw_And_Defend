@@ -10,11 +10,19 @@ namespace MeshPencil.Collider
 
         private Action<GameObject> _onCompleteCallback;
 
-        public override void CreateCollider(VoxelData data, float depth, float boxSize,PhysicMaterial physicMaterial = null, Action<GameObject> onCompleteCallback = null)
+		private void Start()
+		{
+            GameController.instance.DeactivateMeshCam();
+        }
+		public override void CreateCollider(VoxelData data, float depth, float boxSize,PhysicMaterial physicMaterial = null, Action<GameObject> onCompleteCallback = null)
         {
             transform.tag = "parentCube";
             _onCompleteCallback = onCompleteCallback;
             transform.GetComponent<Rigidbody>().velocity = new Vector3(0,-10f,0);
+            //if (transform.GetComponent<Rigidbody>().velocity.y != 0)
+            //{
+            //    if (GameController.instance.isDrawable) GameController.instance.DeactivateMeshCam();
+            //}
             for (int y = 0; y < data.Width; y++)
             {   
                 //Continue extend current box collider width

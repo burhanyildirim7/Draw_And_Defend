@@ -107,7 +107,7 @@ namespace MeshPencil.Common.MouseInputListener
             {
                 if (Input.GetKeyDown(_finishDrawingKeyCode) || Input.GetMouseButtonUp(0))
                 {
-                    if(GameController.instance.isDrawable) GameController.instance.DeactivateMeshCam();
+                    //if(GameController.instance.isDrawable) GameController.instance.DeactivateMeshCam();
                     OnDrawFinished();
                     GameController.instance.cizilenPixel = 0;
                     UIController.instance.SetMeshSlider(GameController.instance.cizimSiniri);

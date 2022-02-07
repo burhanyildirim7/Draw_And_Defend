@@ -12,14 +12,22 @@ public class DestroyCubes : MonoBehaviour
 	}
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag("mesh") && isEnable)
+		if (other.CompareTag("parentCube") && isEnable)
 		{
 			isEnable = false;
-			other.transform.parent.GetComponent<Rigidbody>().useGravity = false;
-			other.transform.parent.GetComponent<Rigidbody>().velocity = Vector3.zero;
-			MeshCrashGround(other.transform.parent.gameObject);
-			Debug.Log("destroy çalýþtý...");
+			other.GetComponent<Collider>().enabled = false;
+			other.GetComponent<Rigidbody>().useGravity = false;
+			other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+			MeshCrashGround(other.gameObject);
 		}
+		//if (other.CompareTag("mesh") && isEnable)
+		//{
+		//	isEnable = false;
+		//	other.transform.parent.GetComponent<Collider>().enabled = false;
+		//	other.transform.parent.GetComponent<Rigidbody>().useGravity = false;
+		//	other.transform.parent.GetComponent<Rigidbody>().velocity = Vector3.zero;
+		//	MeshCrashGround(other.transform.parent.gameObject);
+		//}
 		// GEREKÝRSE AÇILACAK.... DÜÞÜNÜLECEK..
 		//if (other.CompareTag("mesh"))
 		//{
@@ -31,22 +39,23 @@ public class DestroyCubes : MonoBehaviour
 			obj.transform.DOMove(new Vector3(obj.transform.position.x, -3.70f,obj.transform.position.z), .3f)
 			.OnComplete(() =>
 			{
-				//StartCoroutine(GameController.instance.DelayAndActivateMeshCam());
-				
+				//StartCoroutine(GameController.instance.DelayAndActivateMeshCam());			
 				obj.transform.DOMove(new Vector3(obj.transform.position.x, -4.48f, obj.transform.position.z), .6f).SetEase(Ease.OutBounce)
 				.OnComplete(()=> 
 				{
 					StartCoroutine(DestroyMesh(obj));
-					GameController.instance.ActivateMeshCam();
+					//GameController.instance.ActivateMeshCam();
 				});
 			});
 		}
 
 		IEnumerator DestroyMesh(GameObject obj)
-		{		
+		{
+			GameController.instance.ActivateMeshCam();
 			yield return new WaitForSeconds(.2f);
 			Destroy(obj);
 			isEnable = true;
+			//if (!GameController.instance.inputListener) GameController.instance.inputListener.SetActive(true);
 		}
 	}
 }

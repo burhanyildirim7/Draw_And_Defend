@@ -11,6 +11,7 @@ public class UIController : MonoBehaviour
 	public Text gamePlayScoreText, winScreenScoreText, levelNoText, tapToStartScoreText, totalElmasText;
 	public Animator ScoreTextAnim;
 	public Slider meshSlider,castleSlider;
+	public GameObject enemyScoreEffect10, enemyScoreEffect20;
 
 
 
@@ -241,6 +242,16 @@ public class UIController : MonoBehaviour
 	public void SetCastleSlider(int value)
 	{
 		castleSlider.value = value;
+	}
+
+	public IEnumerator EnemyScore(Vector3 pos, GameObject parent)
+	{
+		yield return new WaitForSeconds(.1f);
+		GameObject tempEnemyScoreEffect;
+		if(parent.transform.childCount > 0) tempEnemyScoreEffect = Instantiate(enemyScoreEffect10, pos, Quaternion.identity);
+		else tempEnemyScoreEffect = Instantiate(enemyScoreEffect20, pos, Quaternion.identity);
+		yield return new WaitForSeconds(.7f);
+		Destroy(tempEnemyScoreEffect);
 	}
 
 	

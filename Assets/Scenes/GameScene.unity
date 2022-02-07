@@ -2074,12 +2074,13 @@ MonoBehaviour:
   score: 0
   elmas: 0
   isContinue: 0
-  DeactivatedObjects: []
-  CastleHealth: 100
+  EnemiesOnCastle: []
+  castleHealth: 100
   meshCam: {fileID: 290156847}
   castle: {fileID: 361645584}
   king: {fileID: 754812041}
   flag: {fileID: 89597009}
+  inputListener: {fileID: 764450283}
   isDrawable: 1
 --- !u!4 &1124119774
 Transform:

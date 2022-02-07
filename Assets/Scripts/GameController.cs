@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
 
     [HideInInspector] public int castleHealth = 100;
 
-    public GameObject meshCam,castle,king,flag;
+    public GameObject meshCam,castle,king,flag,inputListener;
 
     public bool isDrawable = true;
 
@@ -37,8 +37,10 @@ public class GameController : MonoBehaviour
 
 	void Start()
     {
+
         castleFirstPos = castle.transform.position;
         kingFirstPos = king.transform.position;
+        StartingEventsAfterNextLevel();
         isContinue = false;
         isDrawable = false;
         meshCam.SetActive(false);
@@ -52,7 +54,7 @@ public class GameController : MonoBehaviour
 	/// <param name="eklenecekScore">Her collectible da ne kadar score eklenip cikarilacaksa parametre olarak o sayi verilmeli</param>
 	public void SetScore(int eklenecekScore)
 	{
-        if(PlayerController.instance.collectibleVarMi) score += eklenecekScore;
+        score += eklenecekScore;
         // Eðer oyunda collectible yok ise developer kendi score sistemini yazmalý...
 
     }
@@ -84,8 +86,7 @@ public class GameController : MonoBehaviour
     }
 
     public void DecreaseCastleHealth()
-	{
-        
+	{      
         castleHealth -= 10;
         if (castleHealth < 0) GameOverEvents();
         UIController.instance.SetCastleSlider(castleHealth);
@@ -100,12 +101,14 @@ public class GameController : MonoBehaviour
     public void ActivateMeshCam()
 	{
         cizilenPixel = 0;
-		isDrawable = true;
+		//isDrawable = true;
+        inputListener.SetActive(true);
 	}
 
     public void DeactivateMeshCam()
 	{
-        isDrawable = false;
+        //isDrawable = false;
+        inputListener.SetActive(false);
         //StartCoroutine(DelayAndActivateMeshCam());
 	}
 
@@ -118,9 +121,14 @@ public class GameController : MonoBehaviour
         king.transform.DOMoveY(-4.2f,1).
             OnComplete(()=> {
                 flag.SetActive(true);
+                int enemyCount = EnemiesOnCastle.Count;
+                int sayac = 1;
+                Debug.Log(enemyCount);
                 foreach(var enemy in EnemiesOnCastle)
 				{
-                    StartCoroutine(EnemiesAttackToKing(enemy));
+                    float xValue = 2 * Mathf.Sin(180/sayac);
+                    StartCoroutine(EnemiesAttackToKing(enemy , xValue));
+                    sayac++;
                 }        
                 UIController.instance.ActivateLooseScreen();
             });
@@ -133,6 +141,7 @@ public class GameController : MonoBehaviour
         isContinue = true;
         cizilenPixel = 0;
         meshCam.SetActive(true);
+        inputListener.SetActive(true);
     }
 
     public void StartingEventsAfterNextLevel()
@@ -147,22 +156,19 @@ public class GameController : MonoBehaviour
         castle.transform.position = castleFirstPos;
         castleHealth = 100;
         UIController.instance.SetCastleSlider(castleHealth);
+        inputListener.SetActive(false);
     }
 
-    IEnumerator EnemiesAttackToKing(GameObject enemy)
+    IEnumerator EnemiesAttackToKing(GameObject enemy , float xValue)
     {
-        int sayac = 0;
         float lerping = 0;
-        int rnd = Random.Range(0,2);
-        float xValue = Random.Range(-2f,2f);
-        float zValue = Mathf.Sqrt((2 - xValue*xValue));
+        float zValue = Mathf.Sqrt((2 - (xValue*xValue)));
    
         Vector3 lastPos =new Vector3(king.transform.position.x + xValue, enemy.transform.position.y, king.transform.position.z -zValue);
         while (Vector3.Distance(enemy.transform.position,lastPos) > .1f)
         {
             enemy.transform.position = Vector3.Lerp(enemy.transform.position,lastPos,lerping);
-            sayac++;
-            lerping += .015f;
+            lerping += .03f;
             yield return new WaitForSeconds(.05f);
         }
     }
