@@ -8,8 +8,8 @@ public class Enemy : MonoBehaviour
 	{
 		if (other.CompareTag("mesh"))
 		{
-			Debug.Log("meshe captýkk");
-			StartCoroutine(UIController.instance.EnemyScore(transform.position, other.transform.parent.gameObject));
+			GetComponent<Collider>().enabled = false;
+			UIController.instance.EnemyScoreFunc(transform.position, transform.parent.gameObject);
 			Destroy(gameObject);
 		}else if (other.CompareTag("kale"))
 		{
@@ -25,11 +25,6 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
-	//IEnumerator DelayAndScore(Vector3 pos)
-	//{
-
-	//	UIController.instance.EnemyScore(transform.position, 10);
-	//}
 
 	IEnumerator RandomPosition()
 	{

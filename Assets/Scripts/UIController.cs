@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class UIController : MonoBehaviour
 {
@@ -244,14 +245,44 @@ public class UIController : MonoBehaviour
 		castleSlider.value = value;
 	}
 
-	public IEnumerator EnemyScore(Vector3 pos, GameObject parent)
+	public void EnemyScoreFunc(Vector3 pos, GameObject parent)
+	{
+		StartCoroutine(EnemyScore(pos,parent));
+	}
+
+	 IEnumerator EnemyScore(Vector3 pos, GameObject parent)
 	{
 		yield return new WaitForSeconds(.1f);
 		GameObject tempEnemyScoreEffect;
-		if(parent.transform.childCount > 0) tempEnemyScoreEffect = Instantiate(enemyScoreEffect10, pos, Quaternion.identity);
-		else tempEnemyScoreEffect = Instantiate(enemyScoreEffect20, pos, Quaternion.identity);
-		yield return new WaitForSeconds(.7f);
-		Destroy(tempEnemyScoreEffect);
+		if (parent.transform.childCount > 0)
+		{
+			tempEnemyScoreEffect = Instantiate(enemyScoreEffect10, pos, Quaternion.Euler(0,180,0));
+			GameController.instance.SetScore(10);
+		}
+		else 
+		{
+			tempEnemyScoreEffect = Instantiate(enemyScoreEffect20, pos, Quaternion.Euler(0, 180, 0));
+			GameController.instance.SetScore(20);
+			if(parent.name == "sonSwarm")
+			{
+				GameController.instance.isLastSwarm = true;
+			}
+		}
+		EnemyScoreEffect(tempEnemyScoreEffect);
+	}
+
+	private void EnemyScoreEffect(GameObject obj)
+	{
+		obj.transform.DOMoveY(obj.transform.position.y+3,1).SetEase(Ease.OutCirc);
+		obj.transform.DOScale(obj.transform.localScale*1.5f,1)
+			.OnComplete(() =>
+			{
+				Destroy(obj);
+				if (GameController.instance.isLastSwarm)
+				{
+					GameController.instance.FinishLevelEvents();
+				}
+			});
 	}
 
 	

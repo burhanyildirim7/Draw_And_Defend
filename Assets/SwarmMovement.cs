@@ -40,12 +40,15 @@ public class SwarmMovement : MonoBehaviour
 		{
 			isRotationTo2 = false;
 			isRotationTo3 = true;
-		}else if (other.CompareTag("kale"))
+		}else if (other.CompareTag("hareket3"))
 		{
-			if(transform.childCount == 0)
+			if(other.gameObject.name == "sonSwarm")
 			{
-				//GameController.instance.ActivateMeshCam();
-				Destroy(gameObject);
+				if(GameController.instance.castleHealth >= 0)
+				{
+					GameController.instance.isLastSwarm = true;
+					GameController.instance.FinishLevelEvents();
+				}
 			}
 		}
 

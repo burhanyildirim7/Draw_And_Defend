@@ -20,21 +20,13 @@ public class DestroyCubes : MonoBehaviour
 			other.GetComponent<Rigidbody>().velocity = Vector3.zero;
 			MeshCrashGround(other.gameObject);
 		}
-		//if (other.CompareTag("mesh") && isEnable)
-		//{
-		//	isEnable = false;
-		//	other.transform.parent.GetComponent<Collider>().enabled = false;
-		//	other.transform.parent.GetComponent<Rigidbody>().useGravity = false;
-		//	other.transform.parent.GetComponent<Rigidbody>().velocity = Vector3.zero;
-		//	MeshCrashGround(other.transform.parent.gameObject);
-		//}
 		// GEREKÝRSE AÇILACAK.... DÜÞÜNÜLECEK..
-		//if (other.CompareTag("mesh"))
-		//{
-		//	other.GetComponent<Collider>().enabled = false;
-		//}
+		if (other.CompareTag("mesh"))
+		{
+			other.GetComponent<Collider>().enabled = false;
+		}
 
-	    void MeshCrashGround(GameObject obj)
+		void MeshCrashGround(GameObject obj)
 		{
 			obj.transform.DOMove(new Vector3(obj.transform.position.x, -3.70f,obj.transform.position.z), .3f)
 			.OnComplete(() =>

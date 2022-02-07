@@ -11,14 +11,9 @@ public class GameController : MonoBehaviour
 
     [HideInInspector]public int score, elmas; // ayrintilar icin benioku 9. satirdan itibaren bak
 
-    [HideInInspector] public bool isContinue;  // ayrintilar icin beni oku 19. satirdan itibaren bak
-
-    //[HideInInspector] public List<GameObject> AllEnemies = new List<GameObject>();
-    //[HideInInspector] public List<GameObject> AllSwarms = new List<GameObject>();
+    [HideInInspector] public bool isContinue,isLastSwarm;  // ayrintilar icin beni oku 19. satirdan itibaren bak
 
     [HideInInspector] public List<GameObject> EnemiesOnCastle = new List<GameObject>();
-
-    //[HideInInspector] public List<Transform> SwarmsFistTransforms = new List<Transform>(); 
 
     [HideInInspector] public int castleHealth = 100;
 
@@ -32,7 +27,7 @@ public class GameController : MonoBehaviour
 	private void Awake()
 	{
         if (instance == null) instance = this;
-        //else Destroy(this);
+        else Destroy(this);
 	}
 
 	void Start()
@@ -101,17 +96,25 @@ public class GameController : MonoBehaviour
     public void ActivateMeshCam()
 	{
         cizilenPixel = 0;
-		//isDrawable = true;
         inputListener.SetActive(true);
 	}
 
     public void DeactivateMeshCam()
 	{
-        //isDrawable = false;
         inputListener.SetActive(false);
-        //StartCoroutine(DelayAndActivateMeshCam());
 	}
 
+
+    // win sonu...
+    public void FinishLevelEvents()
+	{
+        DeactivateMeshCam();
+        ScoreCarp(1);
+        Debug.Log("KAZANDIIKKK");
+        // sevineceklerrr... falan filann sonra win ekraný...
+	}
+
+    // fail game sonu
     void GameOverEvents()
 	{
         isContinue = false;
@@ -122,13 +125,12 @@ public class GameController : MonoBehaviour
             OnComplete(()=> {
                 flag.SetActive(true);
                 int enemyCount = EnemiesOnCastle.Count;
-                int sayac = 1;
-                Debug.Log(enemyCount);
+                float sayac = 0;
                 foreach(var enemy in EnemiesOnCastle)
 				{
-                    float xValue = 2 * Mathf.Sin(180/sayac);
+                    float xValue = -2 + ((4*sayac) / enemyCount);
                     StartCoroutine(EnemiesAttackToKing(enemy , xValue));
-                    sayac++;
+                    sayac+=1f;
                 }        
                 UIController.instance.ActivateLooseScreen();
             });
@@ -168,7 +170,7 @@ public class GameController : MonoBehaviour
         while (Vector3.Distance(enemy.transform.position,lastPos) > .1f)
         {
             enemy.transform.position = Vector3.Lerp(enemy.transform.position,lastPos,lerping);
-            lerping += .03f;
+            lerping += .015f;
             yield return new WaitForSeconds(.05f);
         }
     }
