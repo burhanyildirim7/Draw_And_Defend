@@ -126,14 +126,14 @@ public class UIController : MonoBehaviour
 		int sayac = 0;
 		while(sayac < GameController.instance.score)
 		{
-			sayac++;
-			if(sayac %2 == 0)
+			sayac+=10;
+			if(sayac %20 == 0)
 			{
 				GameObject effectObj = Instantiate(winScreenEffectObject, new Vector3(144, 400, 0), Quaternion.identity,winScreenCoinImage.transform);
 				effectObj.transform.localPosition = new Vector3(144,300,0);
 				effectObj.transform.localRotation = Quaternion.Euler(0,0, winScreenCoinImage.transform.localRotation.z);
 				effectObj.GetComponent<Image>().sprite = winScreenCoinImage.GetComponent<Image>().sprite;
-				effectObj.transform.localScale = Vector3.one * .2f;
+				effectObj.transform.localScale = Vector3.one * .4f;
 				StartCoroutine(WinScreenEffect(effectObj));
 			}
 			winScreenScoreText.text = sayac.ToString();

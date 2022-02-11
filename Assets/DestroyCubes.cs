@@ -21,10 +21,10 @@ public class DestroyCubes : MonoBehaviour
 			MeshCrashGround(other.gameObject);
 		}
 		// GEREKÝRSE AÇILACAK.... DÜÞÜNÜLECEK..
-		if (other.CompareTag("mesh"))
-		{
-			other.GetComponent<Collider>().enabled = false;
-		}
+		//if (other.CompareTag("mesh"))
+		//{
+		//	other.GetComponent<Collider>().enabled = false;
+		//}
 
 		void MeshCrashGround(GameObject obj)
 		{
