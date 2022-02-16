@@ -176,7 +176,7 @@ public class UIController : MonoBehaviour
 				StartCoroutine(StartScreenCoinsDissolve(coin));
 			}			
 		}
-		Instantiate(scoreEffect, new Vector3(1.34f,5.43F,-1.15F), Quaternion.identity);
+		Instantiate(scoreEffect, new Vector3(-2.4f,3.5F,17F), Quaternion.identity);
 		ScoreTextAnim.SetTrigger("score");
 		startScreenCoinImage.SetActive(false);
 		startScreenCoinImage.transform.localPosition = new Vector3(0,-446,0);

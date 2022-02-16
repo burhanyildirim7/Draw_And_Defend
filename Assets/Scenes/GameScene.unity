@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.47884, g: 0.8001845, b: 0.90072787, a: 1}
+  m_IndirectSpecularColor: {r: 0.47698158, g: 0.7989754, b: 0.8985044, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -581,8 +581,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.6, y: 2.92, z: 0.914629}
-  m_Center: {x: 0, y: 0, z: -3.0952044}
+  m_Size: {x: 6.6, y: 2.92, z: 1.5668449}
+  m_Center: {x: 0, y: 0, z: -3.4213123}
 --- !u!4 &361645586
 Transform:
   m_ObjectHideFlags: 0
@@ -1637,6 +1637,7 @@ GameObject:
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
   - component: {fileID: 963194230}
+  - component: {fileID: 963194231}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1756,6 +1757,18 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &963194231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b9ae18c04c25345a5622a4d1fdcf22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1069792110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,7 +1988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cizilenPixel: 0
-  swarmSpeed: 0.02
+  swarmSpeed: 0.01
   score: 0
   elmas: 0
   isContinue: 0
@@ -2125,7 +2138,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46205357, y: 1}
+    m_SensorSize: {x: 0.46220303, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2526,10 +2539,10 @@ MonoBehaviour:
   _voxelRenderer: {fileID: 1570900234}
   _borderDisplayer: {fileID: 1331343069}
   _drawHistoryRegister: {fileID: 492815870}
-  _pixelsInRowAmount: 82
-  _columnsAmount: 55
+  _pixelsInRowAmount: 15
+  _columnsAmount: 10
   _canvasAreaPreview: 1
-  _scale: 0.033
+  _scale: 0.18
   _depth: 0.18
   _isMultipleDrawMode: 1
   _renderCamera: {fileID: 0}
@@ -2729,9 +2742,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 100574376}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 500
+  m_MaxValue: 40
   m_WholeNumbers: 1
-  m_Value: 500
+  m_Value: 40
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
