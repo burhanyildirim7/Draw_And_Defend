@@ -110,6 +110,7 @@ namespace MeshPencil.Common.MouseInputListener
                     //if(GameController.instance.isDrawable) GameController.instance.DeactivateMeshCam();
                     OnDrawFinished();
                     GameController.instance.cizilenPixel = 0;
+                    GameController.instance.kingAnimator.SetTrigger("attack");
                     UIController.instance.SetMeshSlider(GameController.instance.cizimSiniri);
                 }
             }

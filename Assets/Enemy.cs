@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
 			StartCoroutine(RandomPosition());
 			GetComponent<Collider>().enabled = false;
 			GameController.instance.EnemiesOnCastle.Add(gameObject);
-			
+			GetComponent<Animator>().SetTrigger("attack");
 			// saldýrý yapýyor...
 			GameController.instance.DecreaseCastleHealth(); 
 			

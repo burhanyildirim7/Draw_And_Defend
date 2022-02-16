@@ -23,6 +23,8 @@ public class GameController : MonoBehaviour
 
     public bool isDrawable = true;
 
+    public Animator kingAnimator;
+
     Vector3 castleFirstPos, kingFirstPos;
 
 
@@ -107,6 +109,33 @@ public class GameController : MonoBehaviour
         inputListener.SetActive(false);
 	}
 
+    public void StartingEventsAfterTapToStart()
+    {
+
+        isDrawable = true;
+        isContinue = true;
+        cizilenPixel = 0;
+        meshCam.SetActive(true);
+        inputListener.SetActive(true);
+        isLastSwarm = false;
+        StartCoroutine(RunAllEnemies());
+    }
+
+    public void StartingEventsAfterNextLevel()
+    {
+        StopAllCoroutines();
+        foreach (var enemy in EnemiesOnCastle)
+        {
+            Destroy(enemy);
+        }
+        EnemiesOnCastle.Clear();
+        king.transform.position = kingFirstPos;
+        castle.transform.position = castleFirstPos;
+        castleHealth = 100;
+        UIController.instance.SetCastleSlider(castleHealth);
+        inputListener.SetActive(false);
+    }
+
 
     // win sonu...
     public void FinishLevelEvents()
@@ -126,52 +155,25 @@ public class GameController : MonoBehaviour
         isContinue = false;
         isDrawable = false;
         meshCam.SetActive(false);
-        castle.transform.DOMoveY(-12f,3);
-        king.transform.DOMoveY(1.1f,1).
-            OnComplete(()=> {
-                flag.SetActive(true);
-                int enemyCount = EnemiesOnCastle.Count;
-                float sayac = 0;
-                foreach(var enemy in EnemiesOnCastle)
-				{
-                    float xValue = -2 + ((4*sayac) / enemyCount);
-                    StartCoroutine(EnemiesAttackToKing(enemy , xValue));
-                    sayac+=1f;
-                }        
-                UIController.instance.ActivateLooseScreen();
-            });
+        castle.transform.DOMoveY(-4f,.6f).OnComplete(() => {
+            flag.SetActive(true);
+            int enemyCount = EnemiesOnCastle.Count;
+            float sayac = 0;
+            foreach (var enemy in EnemiesOnCastle)
+            {
+                float xValue = -.7f + ((1.4f * sayac) / enemyCount);
+                StartCoroutine(EnemiesAttackToKing(enemy, xValue));
+                sayac += 1f;
+            }
+            UIController.instance.ActivateLooseScreen();
+        });         
 	}
 
-    public void StartingEventsAfterTapToStart()
-	{
-
-        isDrawable = true;
-        isContinue = true;
-        cizilenPixel = 0;
-        meshCam.SetActive(true);
-        inputListener.SetActive(true);
-        isLastSwarm = false;
-    }
-
-    public void StartingEventsAfterNextLevel()
-    {
-        StopAllCoroutines();
-        foreach (var enemy in EnemiesOnCastle)
-        {
-            Destroy(enemy);
-        }
-        EnemiesOnCastle.Clear();
-        king.transform.position = kingFirstPos;
-        castle.transform.position = castleFirstPos;
-        castleHealth = 100;
-        UIController.instance.SetCastleSlider(castleHealth);
-        inputListener.SetActive(false);
-    }
 
     IEnumerator EnemiesAttackToKing(GameObject enemy , float xValue)
     {
         float lerping = 0;
-        float zValue = Mathf.Sqrt((2 - (xValue*xValue)));
+        float zValue = Mathf.Sqrt((2f - (xValue*xValue)));
    
         Vector3 lastPos =new Vector3(king.transform.position.x + xValue, enemy.transform.position.y, king.transform.position.z -zValue);
         while (Vector3.Distance(enemy.transform.position,lastPos) > .1f)
@@ -181,4 +183,16 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(.05f);
         }
     }
+
+    public IEnumerator RunAllEnemies()
+	{
+        yield return new WaitForSeconds(.2f);
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+        for(int i=0; i < enemies.Length; i++)
+		{
+            enemies[i].GetComponent<Animator>().SetTrigger("run");
+		}
+	}
+
+    
 }

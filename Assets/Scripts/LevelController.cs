@@ -70,6 +70,7 @@ public class LevelController : MonoBehaviour
 		Destroy(currentLevelObj);
 		IncreaseLevelNo();
 		LevelStartingEvents();
+		GameController.instance.StartingEventsAfterNextLevel();
 		//PlayerController.instance.StartingEvents();		
 	}
 
