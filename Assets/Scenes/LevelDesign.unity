@@ -5673,7 +5673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 563891338398479486, guid: 07304469e6363684db344578fa3d9fb4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 563891338398479487, guid: 07304469e6363684db344578fa3d9fb4, type: 3}
       propertyPath: m_RootOrder
@@ -5728,13 +5728,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 226217400621147515, guid: a157fdbb725caca4c90daadf8aecf323, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7751660752233374961, guid: a157fdbb725caca4c90daadf8aecf323, type: 3}
       propertyPath: m_Name
       value: LEVEL 1
       objectReference: {fileID: 0}
     - target: {fileID: 7751660752233374961, guid: a157fdbb725caca4c90daadf8aecf323, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7751660752233374962, guid: a157fdbb725caca4c90daadf8aecf323, type: 3}
       propertyPath: m_RootOrder
@@ -5780,7 +5784,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 226217400621147515, guid: a157fdbb725caca4c90daadf8aecf323, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a157fdbb725caca4c90daadf8aecf323, type: 3}
 --- !u!222 &8065103501126037052
 CanvasRenderer:

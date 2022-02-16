@@ -136,6 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4106290988709563105}
+  - component: {fileID: 471600930175659941}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -150,7 +151,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47481769246370098}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -159,6 +160,26 @@ Transform:
   m_Father: {fileID: 7785080246854960877}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &471600930175659941
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47481769246370098}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &49573723864458287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,6 +1566,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4561562637692917819}
+  - component: {fileID: 8903463256743289828}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -1559,7 +1581,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339469657475057166}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1568,6 +1590,26 @@ Transform:
   m_Father: {fileID: 8893902538662454995}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8903463256743289828
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339469657475057166}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &352729008419525785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1771,6 +1813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1172364659461443003}
+  - component: {fileID: 1749936054136863748}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -1785,7 +1828,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378246930467120645}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1794,6 +1837,26 @@ Transform:
   m_Father: {fileID: 1854600225717057189}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1749936054136863748
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378246930467120645}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &378932858799018176
 GameObject:
   m_ObjectHideFlags: 0
@@ -4466,6 +4529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4511102025286574924}
+  - component: {fileID: 8281802236849198276}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -4480,7 +4544,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077139392053402269}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4489,6 +4553,26 @@ Transform:
   m_Father: {fileID: 6065864491406457568}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8281802236849198276
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077139392053402269}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1082380314537010736
 GameObject:
   m_ObjectHideFlags: 0
@@ -5615,6 +5699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1055331403156455502}
+  - component: {fileID: 9084112227214820683}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -5629,7 +5714,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299589951066231149}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5638,6 +5723,26 @@ Transform:
   m_Father: {fileID: 3326570233687481779}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &9084112227214820683
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299589951066231149}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1311432915079273746
 GameObject:
   m_ObjectHideFlags: 0
@@ -6525,6 +6630,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4638523565013690509}
+  - component: {fileID: 3460001528461529248}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -6539,7 +6645,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511153823110544596}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6548,6 +6654,26 @@ Transform:
   m_Father: {fileID: 9132720709801906158}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3460001528461529248
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511153823110544596}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1513714020049613523
 GameObject:
   m_ObjectHideFlags: 0
@@ -7401,6 +7527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2261845726742522836}
+  - component: {fileID: 117612953734641692}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -7415,7 +7542,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796545127486766055}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7424,6 +7551,26 @@ Transform:
   m_Father: {fileID: 7562883311858683262}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &117612953734641692
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796545127486766055}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1801540298511045014
 GameObject:
   m_ObjectHideFlags: 0
@@ -7687,6 +7834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8339423197646864543}
+  - component: {fileID: 4205794301326565794}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -7701,7 +7849,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1867682599093980529}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7710,6 +7858,26 @@ Transform:
   m_Father: {fileID: 4664582748680393271}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &4205794301326565794
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867682599093980529}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1869329913087556311
 GameObject:
   m_ObjectHideFlags: 0
@@ -7879,6 +8047,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 459597027696698286}
+  - component: {fileID: 3451928087144061582}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -7893,7 +8062,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919858486908043360}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7902,6 +8071,26 @@ Transform:
   m_Father: {fileID: 1577960842632236066}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3451928087144061582
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919858486908043360}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1921518950372023470
 GameObject:
   m_ObjectHideFlags: 0
@@ -9119,7 +9308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4664582748680393271}
   - component: {fileID: 8463207768945498140}
-  - component: {fileID: 9087298845119006652}
+  - component: {fileID: 1371918867620313244}
   m_Layer: 0
   m_Name: Stickman (2)
   m_TagString: enemy
@@ -9157,7 +9346,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &9087298845119006652
+--- !u!114 &1371918867620313244
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9306,6 +9495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 252864593945654979}
+  - component: {fileID: 7050180598286086127}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -9320,7 +9510,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2246737109139040224}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9329,6 +9519,26 @@ Transform:
   m_Father: {fileID: 2525757787427269438}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &7050180598286086127
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2246737109139040224}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2273986569900715829
 GameObject:
   m_ObjectHideFlags: 0
@@ -10691,6 +10901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6349254967875065088}
+  - component: {fileID: 8114213226489562567}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -10705,7 +10916,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2629532485996523373}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10714,6 +10925,26 @@ Transform:
   m_Father: {fileID: 4902744330619411575}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8114213226489562567
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629532485996523373}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2658983943214484236
 GameObject:
   m_ObjectHideFlags: 0
@@ -13142,6 +13373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4946890929586243570}
+  - component: {fileID: 3544133993575870744}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -13156,7 +13388,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3303549151701326618}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13165,6 +13397,26 @@ Transform:
   m_Father: {fileID: 5307926978838250786}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3544133993575870744
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3303549151701326618}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3316695991603078313
 GameObject:
   m_ObjectHideFlags: 0
@@ -14943,6 +15195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8553027759130981653}
+  - component: {fileID: 6167884797748015121}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -14957,7 +15210,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3703112290163907755}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14966,6 +15219,26 @@ Transform:
   m_Father: {fileID: 4838165255641796383}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &6167884797748015121
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3703112290163907755}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3706404048031435680
 GameObject:
   m_ObjectHideFlags: 0
@@ -15442,6 +15715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7913263976922367461}
+  - component: {fileID: 7851710223408891323}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -15456,7 +15730,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3832760996114961909}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15465,6 +15739,26 @@ Transform:
   m_Father: {fileID: 1980074613280716799}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &7851710223408891323
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3832760996114961909}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3841248794695893925
 GameObject:
   m_ObjectHideFlags: 0
@@ -19213,6 +19507,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6862650974942294115}
+  - component: {fileID: 5768603805068426898}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -19227,7 +19522,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4868761521034928448}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -19236,6 +19531,26 @@ Transform:
   m_Father: {fileID: 9201444351317405086}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &5768603805068426898
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4868761521034928448}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4869075298366552677
 GameObject:
   m_ObjectHideFlags: 0
@@ -19704,6 +20019,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4879077157455718449}
+  - component: {fileID: 3614375904032093377}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -19718,7 +20034,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4918827046603792878}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -19727,6 +20043,26 @@ Transform:
   m_Father: {fileID: 6270713839041277818}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3614375904032093377
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4918827046603792878}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4941295578455771590
 GameObject:
   m_ObjectHideFlags: 0
@@ -19770,6 +20106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5202751568533728084}
+  - component: {fileID: 1738604607979349771}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -19784,7 +20121,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4963864131489695938}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -19793,6 +20130,26 @@ Transform:
   m_Father: {fileID: 1392731764237554265}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1738604607979349771
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4963864131489695938}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4971844317663672606
 GameObject:
   m_ObjectHideFlags: 0
@@ -19869,6 +20226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6479848852898211252}
+  - component: {fileID: 7861118719244903586}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -19883,7 +20241,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4990362556703224983}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -19892,6 +20250,26 @@ Transform:
   m_Father: {fileID: 8746584634698528841}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &7861118719244903586
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4990362556703224983}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5004575423166871761
 GameObject:
   m_ObjectHideFlags: 0
@@ -20497,6 +20875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2781746095928502255}
+  - component: {fileID: 1661141983763424076}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -20511,7 +20890,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5143330185857817821}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -20520,6 +20899,26 @@ Transform:
   m_Father: {fileID: 8944307243005426194}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1661141983763424076
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143330185857817821}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5149229337530577676
 GameObject:
   m_ObjectHideFlags: 0
@@ -21359,6 +21758,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4699071873230839756}
+  - component: {fileID: 4759637701649179414}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -21373,7 +21773,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5377783810981606064}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -21382,6 +21782,26 @@ Transform:
   m_Father: {fileID: 5512052864485151340}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &4759637701649179414
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5377783810981606064}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5382967047588275467
 GameObject:
   m_ObjectHideFlags: 0
@@ -22217,6 +22637,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7338004619908393027}
+  - component: {fileID: 3734971941115926006}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -22231,7 +22652,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5575149040855717728}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22240,6 +22661,26 @@ Transform:
   m_Father: {fileID: 4660631414458827171}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3734971941115926006
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5575149040855717728}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5589694422674869783
 GameObject:
   m_ObjectHideFlags: 0
@@ -22697,6 +23138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6041090128845772024}
+  - component: {fileID: 3810302398192582655}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -22711,7 +23153,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5726919606026913243}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22720,6 +23162,26 @@ Transform:
   m_Father: {fileID: 8311766011705067781}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3810302398192582655
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5726919606026913243}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5733480102833880268
 GameObject:
   m_ObjectHideFlags: 0
@@ -24530,6 +24992,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4284107862642331022}
+  - component: {fileID: 7017735995674648746}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -24544,7 +25007,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6421160790308147560}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -24553,6 +25016,26 @@ Transform:
   m_Father: {fileID: 1717526268029225952}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &7017735995674648746
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6421160790308147560}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6424673956176246727
 GameObject:
   m_ObjectHideFlags: 0
@@ -27560,6 +28043,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2822129191717586232}
+  - component: {fileID: 1007553828527670941}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -27574,7 +28058,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7132676929576152198}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -27583,6 +28067,26 @@ Transform:
   m_Father: {fileID: 1350199492471848754}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1007553828527670941
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132676929576152198}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7135194468129392212
 GameObject:
   m_ObjectHideFlags: 0
@@ -27945,6 +28449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8165086005443805387}
+  - component: {fileID: 2044842281695192482}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -27959,7 +28464,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7217837058646731637}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -27968,6 +28473,26 @@ Transform:
   m_Father: {fileID: 8694753303867653077}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2044842281695192482
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7217837058646731637}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7238057649117758254
 GameObject:
   m_ObjectHideFlags: 0
@@ -32958,6 +33483,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4532656034881932874}
+  - component: {fileID: 6878655155252945567}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -32972,7 +33498,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8477050148634706236}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -32981,6 +33507,26 @@ Transform:
   m_Father: {fileID: 7307392497921854080}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &6878655155252945567
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8477050148634706236}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8483701955782965803
 GameObject:
   m_ObjectHideFlags: 0
@@ -34211,6 +34757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3774873846782858036}
+  - component: {fileID: 3913247162694330064}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -34225,7 +34772,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8882814865731926880}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34234,6 +34781,26 @@ Transform:
   m_Father: {fileID: 9035599761080916858}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3913247162694330064
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882814865731926880}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8888325078106357177
 GameObject:
   m_ObjectHideFlags: 0
@@ -34275,6 +34842,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1530838998318053343}
+  - component: {fileID: 3037405279110095164}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -34289,7 +34857,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8953387580006312759}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34298,6 +34866,26 @@ Transform:
   m_Father: {fileID: 1743396170488952079}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3037405279110095164
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8953387580006312759}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8965821036146567871
 GameObject:
   m_ObjectHideFlags: 0
@@ -34370,6 +34958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4570703480865473730}
+  - component: {fileID: 8228574729566411021}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -34384,7 +34973,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8988701714227279287}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34393,6 +34982,26 @@ Transform:
   m_Father: {fileID: 8855539851533928660}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8228574729566411021
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8988701714227279287}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8990737709051163450
 GameObject:
   m_ObjectHideFlags: 0
@@ -34657,6 +35266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7045404129941268440}
+  - component: {fileID: 1776096730090081449}
   m_Layer: 0
   m_Name: Skelet.c
   m_TagString: Untagged
@@ -34671,7 +35281,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9037059548723345147}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34680,6 +35290,26 @@ Transform:
   m_Father: {fileID: 4704394550034577957}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1776096730090081449
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9037059548723345147}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4e1a5a43764120348bd50b65023551f2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4718b06dc2d05b74fb609c62256f350e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9043622827066806252
 GameObject:
   m_ObjectHideFlags: 0
