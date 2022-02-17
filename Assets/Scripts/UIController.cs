@@ -121,6 +121,7 @@ public class UIController : MonoBehaviour
 
 	IEnumerator WinScreenDelay()
 	{
+		yield return new WaitForSeconds(3f);
 		WinPanel.SetActive(true);
 		winScreenScoreText.text = "0";
 		int sayac = 0;

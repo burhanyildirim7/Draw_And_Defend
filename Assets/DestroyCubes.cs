@@ -18,6 +18,7 @@ public class DestroyCubes : MonoBehaviour
 			other.GetComponent<Collider>().enabled = false;
 			other.GetComponent<Rigidbody>().useGravity = false;
 			other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+			other.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
 			MeshCrashGround(other.gameObject);
 		}
 		// GEREKÝRSE AÇILACAK.... DÜÞÜNÜLECEK..
@@ -32,7 +33,7 @@ public class DestroyCubes : MonoBehaviour
 			.OnComplete(() =>
 			{
 				//StartCoroutine(GameController.instance.DelayAndActivateMeshCam());			
-				obj.transform.DOMove(new Vector3(obj.transform.position.x, transform.position.y+.6f, obj.transform.position.z), .6f).SetEase(Ease.OutBounce)
+				obj.transform.DOMove(new Vector3(obj.transform.position.x, transform.position.y+.7f, obj.transform.position.z), .6f).SetEase(Ease.OutBounce)
 				.OnComplete(()=> 
 				{
 					StartCoroutine(DestroyMesh(obj));

@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
 
     [HideInInspector] public int castleHealth = 100;
 
-    public GameObject meshCam,castle,king,flag,inputListener;
+    public GameObject meshCam,castle,king,flag,inputListener,mainCam;
 
     public bool isDrawable = true;
 
@@ -119,6 +119,9 @@ public class GameController : MonoBehaviour
         inputListener.SetActive(true);
         isLastSwarm = false;
         StartCoroutine(RunAllEnemies());
+        CameraContoller.instance.ActivateCinemachine();
+        king.transform.GetChild(0).transform.DORotate(new Vector3(0, 180, 0), .5f);
+        king.GetComponentInChildren<Animator>().SetTrigger("idle");
     }
 
     public void StartingEventsAfterNextLevel()
@@ -144,8 +147,12 @@ public class GameController : MonoBehaviour
         DeactivateMeshCam();
         ScoreCarp(1);
         isContinue = false;
+        king.GetComponentInChildren<Animator>().SetTrigger("victory");
+        king.GetComponentInChildren<Animator>().ResetTrigger("idle");
         UIController.instance.ActivateWinScreen();
-
+        king.transform.GetChild(0).transform.DORotate(new Vector3(0,0,0),.5f);
+        CameraContoller.instance.DeactivateCinemachine();
+        mainCam.transform.DOMove(new Vector3(0,3.1f,28f),.3f);
         // sevineceklerrr... falan filann sonra win ekraný...
 	}
 
