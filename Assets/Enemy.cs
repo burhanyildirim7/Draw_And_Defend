@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
 		int sayac = 0;
 		float xValue = Random.Range(-.02f, .02f);
 		float zValue = Random.Range(-.01f, .01f);
-		while(sayac < 100)
+		while(sayac < 60)
 		{
 			transform.position +=new Vector3(xValue,0,zValue);
 			sayac++;

@@ -19,12 +19,13 @@ public class GameController : MonoBehaviour
 
     [HideInInspector] public int castleHealth = 100;
 
-    public GameObject meshCam,castle,king,flag,inputListener,mainCam;
+    public GameObject meshCam,castle,king,flag,inputListener,mainCam,enemyLookAtObject;
 
     public bool isDrawable = true;
 
     public Animator kingAnimator;
-
+    Sequence sequence;
+    private bool enemyToRight = true;
     Vector3 castleFirstPos, kingFirstPos;
 
 
@@ -162,36 +163,34 @@ public class GameController : MonoBehaviour
         isContinue = false;
         isDrawable = false;
         meshCam.SetActive(false);
-        castle.transform.DOMoveY(-4f,.6f).OnComplete(() => {
-            flag.SetActive(true);
-            int enemyCount = EnemiesOnCastle.Count;
-            float sayac = 0;
-            foreach (var enemy in EnemiesOnCastle)
-            {
-                float xValue = -.7f + ((1.4f * sayac) / enemyCount);
-                StartCoroutine(EnemiesAttackToKing(enemy, xValue));
-                sayac += 1f;
-            }
-            UIController.instance.ActivateLooseScreen();
-        });         
-	}
+        castle.transform.DOMoveY(-4f, .6f).OnComplete(() => EnemiesMoveToKing());    
+    }
 
-
-    IEnumerator EnemiesAttackToKing(GameObject enemy , float xValue)
-    {
-        float lerping = 0;
-        float zValue = Mathf.Sqrt((2f - (xValue*xValue)));
-   
-        Vector3 lastPos =new Vector3(king.transform.position.x + xValue, enemy.transform.position.y, king.transform.position.z -zValue);
-        while (Vector3.Distance(enemy.transform.position,lastPos) > .1f)
+    private void EnemiesMoveToKing()
+	{
+        float radius = .8f;
+        for (int i = 0; i < EnemiesOnCastle.Count; i++)
         {
-            enemy.transform.position = Vector3.Lerp(enemy.transform.position,lastPos,lerping);
-            lerping += .015f;
-            yield return new WaitForSeconds(.05f);
+            float angle = i * Mathf.PI * 2f / EnemiesOnCastle.Count;
+            Vector3 newPos = new(king.transform.GetChild(0).transform.position.x + Mathf.Cos(angle) * radius, EnemiesOnCastle[i].transform.position.y, king.transform.GetChild(0).transform.position.z + Mathf.Sin(angle) * radius);
+            EnemiesOnCastle[i].transform.DOMove(newPos, .6f).OnComplete(() => EnemiesLookAtKing());//
+
+        }
+        UIController.instance.ActivateLooseScreen();
+    }
+
+    private void EnemiesLookAtKing()
+	{
+        for (int i = 0; i < EnemiesOnCastle.Count; i++)
+        {
+            EnemiesOnCastle[i].transform.LookAt(enemyLookAtObject.transform, Vector3.up);
+            EnemiesOnCastle[i].transform.Rotate(EnemiesOnCastle[i].transform.rotation.x, EnemiesOnCastle[i].transform.rotation.y + 179, EnemiesOnCastle[i].transform.rotation.z);
         }
     }
 
-    public IEnumerator RunAllEnemies()
+
+    
+    private IEnumerator RunAllEnemies()
 	{
         yield return new WaitForSeconds(.2f);
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
