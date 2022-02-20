@@ -1,17 +1,14 @@
 fileFormatVersion: 2
-guid: 87b010a20d1b7774e97c05eb18012a07
+guid: 416f1191062369b47af05e6891912f2d
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
-      74: 1523256558974021481
-    second: "k\u0131ng-attack|Cube.003Action"
+      74: -5770789131149965533
+    second: KING_IDLE_deform|Skelet.c.001Action.001 Retarget
   - first:
-      74: 1978595567913762444
-    second: "k\u0131ng-attack|PoseLib"
-  - first:
-      74: 5162594633812812645
-    second: "k\u0131ng-attack|Skelet.c.001Action.002"
+      74: -203655887218126122
+    second: mixamo.com
   externalObjects: {}
   materials:
     materialImportMode: 2

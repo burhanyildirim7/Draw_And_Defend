@@ -120,9 +120,8 @@ public class GameController : MonoBehaviour
         inputListener.SetActive(true);
         isLastSwarm = false;
         StartCoroutine(RunAllEnemies());
-        CameraContoller.instance.ActivateCinemachine();
-        king.transform.GetChild(0).transform.DORotate(new Vector3(0, 180, 0), .5f);
-        king.GetComponentInChildren<Animator>().SetTrigger("idle");
+        
+     
     }
 
     public void StartingEventsAfterNextLevel()
@@ -138,6 +137,10 @@ public class GameController : MonoBehaviour
         castleHealth = 100;
         UIController.instance.SetCastleSlider(castleHealth);
         inputListener.SetActive(false);
+        ResetAllTrigger();
+        king.GetComponentInChildren<Animator>().SetTrigger("idle");
+        CameraContoller.instance.ActivateCinemachine();
+        king.transform.GetChild(0).transform.DORotate(new Vector3(0, 180, 0), .5f);
     }
 
 
@@ -148,8 +151,8 @@ public class GameController : MonoBehaviour
         DeactivateMeshCam();
         ScoreCarp(1);
         isContinue = false;
-        king.GetComponentInChildren<Animator>().SetTrigger("victory");
-        king.GetComponentInChildren<Animator>().ResetTrigger("idle");
+        ResetAllTrigger();
+        king.GetComponentInChildren<Animator>().SetTrigger("victory");       
         UIController.instance.ActivateWinScreen();
         king.transform.GetChild(0).transform.DORotate(new Vector3(0,0,0),.5f);
         CameraContoller.instance.DeactivateCinemachine();
@@ -168,6 +171,15 @@ public class GameController : MonoBehaviour
 
     private void EnemiesMoveToKing()
 	{
+        GameObject[] swarms = GameObject.FindGameObjectsWithTag("swarn");
+        foreach(GameObject swarm in swarms)
+		{
+            Destroy(swarm);
+		}
+        //for (int i = 0; i < swarms.Length; i++)
+        //{
+        //    Destroy(swarms[0]);
+        //}
         float radius = .8f;
         for (int i = 0; i < EnemiesOnCastle.Count; i++)
         {
@@ -185,11 +197,22 @@ public class GameController : MonoBehaviour
         {
             EnemiesOnCastle[i].transform.LookAt(enemyLookAtObject.transform, Vector3.up);
             EnemiesOnCastle[i].transform.Rotate(EnemiesOnCastle[i].transform.rotation.x, EnemiesOnCastle[i].transform.rotation.y + 179, EnemiesOnCastle[i].transform.rotation.z);
+            ResetAllTrigger();
+            king.GetComponentInChildren<Animator>().SetTrigger("die");
+            StartCoroutine(StopCastleEnemies());
+        }
+    }
+
+    private IEnumerator StopCastleEnemies()
+    {
+        yield return new WaitForSeconds(2.5f);
+        for (int i = 0; i < EnemiesOnCastle.Count; i++)
+        {
+            EnemiesOnCastle[i].GetComponent<Animator>().SetTrigger("idle");
         }
     }
 
 
-    
     private IEnumerator RunAllEnemies()
 	{
         yield return new WaitForSeconds(.2f);
@@ -199,6 +222,14 @@ public class GameController : MonoBehaviour
             enemies[i].GetComponent<Animator>().SetTrigger("run");
 		}
 	}
+
+    private void ResetAllTrigger()
+	{
+        king.GetComponentInChildren<Animator>().ResetTrigger("die");
+        king.GetComponentInChildren<Animator>().ResetTrigger("victory");
+        king.GetComponentInChildren<Animator>().ResetTrigger("idle");
+        king.GetComponentInChildren<Animator>().ResetTrigger("attack");
+    }
 
     
 }
