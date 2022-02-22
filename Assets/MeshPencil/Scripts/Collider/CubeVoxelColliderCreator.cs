@@ -10,10 +10,6 @@ namespace MeshPencil.Collider
 
         private Action<GameObject> _onCompleteCallback;
 
-		private void Start()
-		{
-            GameController.instance.DeactivateMeshCam();
-        }
 		public override void CreateCollider(VoxelData data, float depth, float boxSize,PhysicMaterial physicMaterial = null, Action<GameObject> onCompleteCallback = null)
         {
             transform.tag = "parentCube";

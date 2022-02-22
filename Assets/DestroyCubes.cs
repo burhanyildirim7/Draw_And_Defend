@@ -31,24 +31,21 @@ public class DestroyCubes : MonoBehaviour
 		{
 			obj.transform.DOMove(new Vector3(obj.transform.position.x, transform.position.y+1.5f,obj.transform.position.z), .3f)
 			.OnComplete(() =>
-			{
-				//StartCoroutine(GameController.instance.DelayAndActivateMeshCam());			
-				obj.transform.DOMove(new Vector3(obj.transform.position.x, transform.position.y+.7f, obj.transform.position.z), .6f).SetEase(Ease.OutBounce)
+			{			
+				obj.transform.DOMove(new Vector3(obj.transform.position.x, transform.position.y-.2f, obj.transform.position.z), .6f).SetEase(Ease.OutBounce)
 				.OnComplete(()=> 
 				{
 					StartCoroutine(DestroyMesh(obj));
-					//GameController.instance.ActivateMeshCam();
 				});
 			});
 		}
 
 		IEnumerator DestroyMesh(GameObject obj)
 		{
-			GameController.instance.ActivateMeshCam();
 			yield return new WaitForSeconds(.2f);
 			Destroy(obj);
 			isEnable = true;
-			//if (!GameController.instance.inputListener) GameController.instance.inputListener.SetActive(true);
+			DrawMeshSbi.instance.ActivateDrawing();
 		}
 	}
 }

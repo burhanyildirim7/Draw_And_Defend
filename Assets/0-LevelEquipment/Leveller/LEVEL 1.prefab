@@ -921,7 +921,7 @@ GameObject:
   - component: {fileID: 7751660752476533030}
   - component: {fileID: 7751660752476533029}
   - component: {fileID: 7751660752476533028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "D\xFCsmeNoktasi"
   m_TagString: fallArea
   m_Icon: {fileID: 0}

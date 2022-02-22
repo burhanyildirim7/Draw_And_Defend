@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
 
     [HideInInspector] public int castleHealth = 100;
 
-    public GameObject meshCam,castle,king,flag,inputListener,mainCam,enemyLookAtObject;
+    public GameObject castle,king,flag,inputListener,mainCam,enemyLookAtObject;
 
     public bool isDrawable = true;
 
@@ -43,7 +43,6 @@ public class GameController : MonoBehaviour
         StartingEventsAfterNextLevel();
         isContinue = false;
         isDrawable = false;
-        meshCam.SetActive(false);
     }
 
 
@@ -93,31 +92,14 @@ public class GameController : MonoBehaviour
         UIController.instance.SetCastleSlider(castleHealth);
 	}
 
-    public IEnumerator DelayAndActivateMeshCam()
-	{
-        yield return new WaitForSeconds(.8f);
-        ActivateMeshCam();
-	}
-  
-    public void ActivateMeshCam()
-	{
-        cizilenPixel = 0;
-        inputListener.SetActive(true);
-	}
 
-    public void DeactivateMeshCam()
-	{
-        inputListener.SetActive(false);
-	}
+  
 
     public void StartingEventsAfterTapToStart()
     {
 
-        isDrawable = true;
         isContinue = true;
         cizilenPixel = 0;
-        meshCam.SetActive(true);
-        inputListener.SetActive(true);
         isLastSwarm = false;
         StartCoroutine(RunAllEnemies());
         
@@ -147,8 +129,6 @@ public class GameController : MonoBehaviour
     // win sonu...
     public void FinishLevelEvents()
 	{
-        meshCam.SetActive(false);
-        DeactivateMeshCam();
         ScoreCarp(1);
         isContinue = false;
         ResetAllTrigger();
@@ -165,7 +145,6 @@ public class GameController : MonoBehaviour
 	{
         isContinue = false;
         isDrawable = false;
-        meshCam.SetActive(false);
         castle.transform.DOMoveY(-4f, .6f).OnComplete(() => EnemiesMoveToKing());    
     }
 

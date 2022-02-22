@@ -52,6 +52,7 @@ public class UIController : MonoBehaviour
 		GamePanel.SetActive(true);
 		SetLevelText(LevelController.instance.totalLevelNo);
 		SetGamePlayScoreText();
+		DrawMeshSbi.instance.ActivateDrawing();
 	}
 
 	// RESTART TUSUNA BASILDISINDA  --- LOOSE EKRANINDA
