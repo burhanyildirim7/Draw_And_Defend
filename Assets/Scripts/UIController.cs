@@ -50,6 +50,7 @@ public class UIController : MonoBehaviour
         GameController.instance.StartingEventsAfterTapToStart();
         TapToStartPanel.SetActive(false);
         GamePanel.SetActive(true);
+        drawPanel.SetActive(true);
         SetLevelText(LevelController.instance.totalLevelNo);
         SetGamePlayScoreText();
         DrawMeshSbi.instance.ActivateDrawing();
@@ -222,8 +223,9 @@ public class UIController : MonoBehaviour
     {
         GamePanel.SetActive(true);
         TapToStartPanel.SetActive(false);
-        SetGamePlayScoreText();
         drawPanel.SetActive(true);
+        SetGamePlayScoreText();
+
     }
 
     /// <summary>
