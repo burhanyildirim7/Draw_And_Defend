@@ -645,6 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c357c5d0cefc6ad42a696b84e56690cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  splashPrefab: {fileID: 3160862574246872525, guid: 8d25f77053d99a4428fdbaa8894e5fcc, type: 3}
 --- !u!1 &3790964767025597340
 GameObject:
   m_ObjectHideFlags: 0

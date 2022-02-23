@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+	public GameObject splashPrefab;
+
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.CompareTag("mesh"))
 		{
 			GetComponent<Collider>().enabled = false;
 			UIController.instance.EnemyScoreFunc(transform.position, transform.parent.gameObject);
+			GameObject tempSplash = Instantiate(splashPrefab, transform.position, Quaternion.identity);
 			Destroy(gameObject);
 		}else if (other.CompareTag("kale"))
 		{
@@ -38,5 +41,7 @@ public class Enemy : MonoBehaviour
 			yield return new WaitForSeconds(.02f);
 		}
 	}
+
+
 
 }

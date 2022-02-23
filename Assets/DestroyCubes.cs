@@ -29,7 +29,7 @@ public class DestroyCubes : MonoBehaviour
 
 		void MeshCrashGround(GameObject obj)
 		{
-			obj.transform.DOMove(new Vector3(obj.transform.position.x, transform.position.y+1.5f,obj.transform.position.z), .3f)
+			obj.transform.DOMove(new Vector3(obj.transform.position.x, transform.position.y+.7f,obj.transform.position.z), .3f)
 			.OnComplete(() =>
 			{			
 				obj.transform.DOMove(new Vector3(obj.transform.position.x, transform.position.y-.2f, obj.transform.position.z), .6f).SetEase(Ease.OutBounce)

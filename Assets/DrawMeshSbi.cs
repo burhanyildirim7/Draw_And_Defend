@@ -48,6 +48,7 @@ public class DrawMeshSbi : MonoBehaviour
         {
             DeactivateDrawing();
             meshParent.GetComponent<Rigidbody>().useGravity = true;
+            meshParent.GetComponent<Rigidbody>().velocity = new Vector3(0,-15,0);
         }
 
     }
@@ -74,7 +75,7 @@ public class DrawMeshSbi : MonoBehaviour
     public void DeactivateDrawing()
     {
         isDrawable = false;
-        GetComponent<Image>().enabled = false;
+        //GetComponent<Image>().enabled = false;
         DeleteAllSprite();
     }
 
