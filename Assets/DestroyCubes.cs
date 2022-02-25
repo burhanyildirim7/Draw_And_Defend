@@ -29,10 +29,10 @@ public class DestroyCubes : MonoBehaviour
 
 		void MeshCrashGround(GameObject obj)
 		{
-			obj.transform.DOMove(new Vector3(obj.transform.position.x, transform.position.y+.7f,obj.transform.position.z), .3f)
+			obj.transform.DOMove(new Vector3(obj.transform.position.x, transform.position.y+.6f,obj.transform.position.z), .3f)
 			.OnComplete(() =>
 			{			
-				obj.transform.DOMove(new Vector3(obj.transform.position.x, transform.position.y-.2f, obj.transform.position.z), .6f).SetEase(Ease.OutBounce)
+				obj.transform.DOMove(new Vector3(obj.transform.position.x, transform.position.y-.2f, obj.transform.position.z), .4f).SetEase(Ease.OutBounce)
 				.OnComplete(()=> 
 				{
 					StartCoroutine(DestroyMesh(obj));

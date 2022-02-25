@@ -53,7 +53,7 @@ public class UIController : MonoBehaviour
 		SetLevelText(LevelController.instance.totalLevelNo);
 		SetGamePlayScoreText();
 		DrawMeshSbi.instance.ActivateDrawing();
-		if (LevelController.instance.levelNo < 3) DrawMeshSbi.instance.ShowOnBoarding();
+		if (PlayerPrefs.GetInt("level") < 3) DrawMeshSbi.instance.ShowOnBoarding();
 	}
 
 	// RESTART TUSUNA BASILDISINDA  --- LOOSE EKRANINDA

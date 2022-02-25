@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -102,12 +103,13 @@ public class GameController : MonoBehaviour
         cizilenPixel = 0;
         isLastSwarm = false;
         StartCoroutine(RunAllEnemies());
-        
      
     }
 
     public void StartingEventsAfterNextLevel()
     {
+        DrawMeshSbi.instance.GetComponent<Image>().enabled = false;
+        DrawMeshSbi.instance.DeactivateDrawing();
         StopAllCoroutines();
         foreach (var enemy in EnemiesOnCastle)
         {
@@ -129,6 +131,8 @@ public class GameController : MonoBehaviour
     // win sonu...
     public void FinishLevelEvents()
 	{
+        DrawMeshSbi.instance.DeactivateDrawing();
+        DrawMeshSbi.instance.GetComponent<Image>().enabled = false;
         ScoreCarp(1);
         isContinue = false;
         ResetAllTrigger();
@@ -150,15 +154,13 @@ public class GameController : MonoBehaviour
 
     private void EnemiesMoveToKing()
 	{
+        DrawMeshSbi.instance.GetComponent<Image>().enabled = false;
+        DrawMeshSbi.instance.DeactivateDrawing();
         GameObject[] swarms = GameObject.FindGameObjectsWithTag("swarn");
         foreach(GameObject swarm in swarms)
 		{
             Destroy(swarm);
 		}
-        //for (int i = 0; i < swarms.Length; i++)
-        //{
-        //    Destroy(swarms[0]);
-        //}
         float radius = .8f;
         for (int i = 0; i < EnemiesOnCastle.Count; i++)
         {

@@ -21,6 +21,7 @@ TagManager:
   - hareket2
   - hareket3
   - kale
+  - onBoarding
   layers:
   - Default
   - TransparentFX

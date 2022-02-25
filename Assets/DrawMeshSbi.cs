@@ -79,6 +79,7 @@ public class DrawMeshSbi : MonoBehaviour
         isDrawable = false;
         //GetComponent<Image>().enabled = false;
         DeleteAllSprite();
+        
     }
 
     public void ActivateDrawing()
@@ -86,7 +87,7 @@ public class DrawMeshSbi : MonoBehaviour
         CreateMeshParent();
         isDrawable = true;
         GetComponent<Image>().enabled = true;
-        if (LevelController.instance.levelNo < 3) DrawMeshSbi.instance.ShowOnBoarding();
+        
     }
 
   
@@ -95,7 +96,7 @@ public class DrawMeshSbi : MonoBehaviour
     {
         foreach (Transform child in transform)
         {
-            Destroy(child.gameObject);
+           if(!child.CompareTag("onBoarding")) Destroy(child.gameObject);
         }
     }
 
