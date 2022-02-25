@@ -46,13 +46,14 @@ public class UIController : MonoBehaviour
 	// TAPTOSTART TUSUNA BASILDISINDA  --- GIRIS EKRANINDA VE LEVEL BASLARINDA
 	public void TapToStartButtonClick()
 	{
-
+	
 		GameController.instance.StartingEventsAfterTapToStart();
 		TapToStartPanel.SetActive(false);
 		GamePanel.SetActive(true);
 		SetLevelText(LevelController.instance.totalLevelNo);
 		SetGamePlayScoreText();
 		DrawMeshSbi.instance.ActivateDrawing();
+		if (LevelController.instance.levelNo < 3) DrawMeshSbi.instance.ShowOnBoarding();
 	}
 
 	// RESTART TUSUNA BASILDISINDA  --- LOOSE EKRANINDA
