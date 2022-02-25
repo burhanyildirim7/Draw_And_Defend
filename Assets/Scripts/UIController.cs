@@ -37,7 +37,7 @@ public class UIController : MonoBehaviour
 	/// <summary>
 	/// Level numarasini ui kisminda degistirmek icin fonksiyon. Parametre olarak level numarasi aliyor.
 	/// </summary>
-	/// <param name="levelNo">UI ekranina yazilmak istenen Level numarasý</param>
+	/// <param name="levelNo">UI ekranina yazilmak istenen Level numarasï¿½</param>
 	public void SetLevelText(int levelNo)
 	{
 		levelNoText.text = "Level " + levelNo.ToString();
@@ -97,7 +97,7 @@ public class UIController : MonoBehaviour
 	}
 
 	/// <summary>
-	/// Bu fonksiyon winscreen de geçerli level scoreunun yazildigi texti gunceller.
+	/// Bu fonksiyon winscreen de geï¿½erli level scoreunun yazildigi texti gunceller.
 	/// </summary>
 	public void WinScreenScore()
 	{
