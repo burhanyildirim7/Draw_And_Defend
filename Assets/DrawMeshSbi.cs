@@ -43,11 +43,13 @@ public class DrawMeshSbi : MonoBehaviour
             Image newBrush = Instantiate(brushPrefab, transform);
             newBrush.transform.position = new(position.x, position.y, 0);
             CreateSingleMesh(position);
-            if (LevelController.instance.levelNo < 3) CloseOnBoarding();
+            if (LevelController.instance.totalLevelNo < 3) CloseOnBoarding();
         }
 
         if (isDrawable && Input.GetMouseButtonUp(0) &&  singleMeshes.Count > 5)
         {
+            GameController.instance.ResetAllTrigger();
+            GameController.instance.kingAnimator.SetTrigger("attack");
             DeactivateDrawing();
             meshParent.GetComponent<Rigidbody>().useGravity = true;
             meshParent.GetComponent<Rigidbody>().velocity = new Vector3(0,-15,0);
@@ -112,7 +114,7 @@ public class DrawMeshSbi : MonoBehaviour
 
     public void StartingEvents()
     {
-        Debug.Log("çalýþtý");
+
         meshParent.transform.parent.transform.rotation = Quaternion.Euler(0, 0, 0);
         meshParent.transform.parent.transform.position = Vector3.zero;
         GameController.instance.isContinue = false;

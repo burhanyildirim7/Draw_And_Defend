@@ -204,7 +204,7 @@ public class GameController : MonoBehaviour
 		}
 	}
 
-    private void ResetAllTrigger()
+    public void ResetAllTrigger()
 	{
         king.GetComponentInChildren<Animator>().ResetTrigger("die");
         king.GetComponentInChildren<Animator>().ResetTrigger("victory");
